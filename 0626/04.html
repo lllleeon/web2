@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquert.com/jquery-latest.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $("img").attr({
+                    src: "imgs/img02.jpg",
+                    alt: "속성설졍 연습3",
+                    width: function(index){
+                        return (index + 1) * 150
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+</body>
+</html>
