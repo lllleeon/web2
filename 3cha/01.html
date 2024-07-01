@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Figma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Figma</h1>
+    <nav>
+        <ul>
+            <li><a href="/">파일 열기</a></li>
+            <li><a href="/about">아무것도 없음</a></li>
+            <li><a href="/contact">아무것도 없음 2</a></li>
+            <li><a href="https://www.figma.com/design/ANxKvsKbhOESEtNiIvsTaz/Untitled?node-id=0-1&t=ZVd8zFXOzGZlRSIL-0" target="_blank">피그마 링크</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        <p>음식사진 가득 피그마 과제</p>
+        <button class="btn" id="alert-button">알림 보기</button>
+        <button class="btn" id="dark-mode-toggle">다크 모드 전환</button>
+        <button class="btn" id="add-content">콘텐츠 추가</button>
+        <div class="content" id="content"></div>
+    </main>
+</div>
+<footer>
+    <p>&copy; 2024 My Figma Guaze</p>
+</footer>
+<script src="js/site.js"></script>
+<script>
+    document.getElementById('alert-button').addEventListener('click', function() {
+        alert('알람이 떳다~');
+    });
+
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+
+    document.getElementById('add-content').addEventListener('click', function() {
+        const newContent = document.createElement('p');
+        newContent.textContent = '-새로운 콘텐츠가 추가됨-';
+        document.getElementById('content').appendChild(newContent);
+    });
+
+    window.addEventListener('load', function() {
+        alert('어서와 음식피그마는 처음이지?');
+    });
+</script>
+</body>
+</html>
